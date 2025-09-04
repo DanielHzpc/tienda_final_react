@@ -7,7 +7,7 @@ function MainLayout() {
   return (
     <div className="flex flex-col">
         <Header />
-        <main className=" min-h-[100vh] m-4">
+        <main className=" flex justify-center items-center flex-col min-h-[100vh] m-4">
             <Outlet />
         </main>
         <Footer  />
