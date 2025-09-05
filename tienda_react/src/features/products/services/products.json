@@ -6,7 +6,7 @@
     "precio": 45.99,
     "stock": 15,
     "categoria": "Teclados",
-    "imagen": "https://example.com/images/redragon-k552.jpg"
+    "imagen": "https://m.media-amazon.com/images/I/71cngLX2xuL._AC_SL1500_.jpg"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "precio": 19.99,
     "stock": 100,
     "categoria": "Cursos",
-    "imagen": "https://example.com/images/curso-mecanografia.jpg"
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Underwood.3.Typewriter.carro.ancho.jpg"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "precio": 129.99,
     "stock": 8,
     "categoria": "Muebles",
-    "imagen": "https://example.com/images/silla-ergonomica.jpg"
+    "imagen": "https://m.media-amazon.com/images/I/71O-02eW61L.jpg"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "precio": 25.0,
     "stock": 30,
     "categoria": "Accesorios",
-    "imagen": "https://example.com/images/alfombrilla-xxl.jpg"
+    "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/38/386337/1738-trust-mouse-pad-xxl-alfombrilla-negra.jpg"
   },
   {
     "id": 5,
@@ -42,6 +42,6 @@
     "precio": 149.99,
     "stock": 12,
     "categoria": "Teclados",
-    "imagen": "https://example.com/images/logitech-g-pro.jpg"
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_784334-MCO89289655070_082025-O.webp"
   }
 ]
