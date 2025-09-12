@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import {getProducts} from '../services/products'
+import {useCart} from '../../cart/context/CartContext'
 
 export function ProductsPage() {
   const [productos , setProductos] = useState([])
   const [load, setLoad] = useState(true)
-
+  const {addToCart} = useCart()
 
   useEffect( () => {
     async function cargarProducts() {
@@ -49,7 +50,8 @@ export function ProductsPage() {
                   <span className="font-bold">{producto.category}</span>
                 </p>
 
-                <button className="mt-4 w-full bg-red-400 text-white py-2 rounded-lg hover:bg-red-300 transition">
+                <button className="mt-4 w-full bg-red-400 text-white py-2 rounded-lg hover:bg-red-300 transition" 
+                onClick={() => addToCart(producto)}>
                   Agregar al carrito
                 </button>
               </div>
