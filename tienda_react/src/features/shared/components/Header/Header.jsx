@@ -6,7 +6,7 @@ function Header() {
       <div className="w-[80vw] flex items-center justify-between">
 
         <NavLink to="/" className="text-red-400 text-3xl font-extrabold tracking-wide hover:text-red-300 transition-colors text-center" >
-          Tienda Deportiva
+          Shop
         </NavLink>
 
         <div className="w-64">
