@@ -22,7 +22,6 @@ Este proyecto ha sido desarrollado como una demostración de habilidades con Rea
 -   **React:** Para la construcción de la interfaz de usuario.
 -   **React Router:** Para gestionar la navegación entre las diferentes páginas de la aplicación.
 -   **Tailwind CSS:** Para un desarrollo rápido y eficiente del estilo y diseño.
--   **[AÑADE CUALQUIER OTRA TECNOLOGÍA QUE USES, EJEMPLO: Axios, etc.]**
 
 ---
 
@@ -37,7 +36,7 @@ Para clonar y ejecutar este proyecto en tu máquina local, sigue estos sencillos
 
 2.  **Navegar al directorio del proyecto:**
     ```bash
-    cd [NOMBRE DE LA CARPETA DEL PROYECTO]
+    cd tienda_react
     ```
 
 3.  **Instalar las dependencias:**
