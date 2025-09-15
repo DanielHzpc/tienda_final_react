@@ -26,7 +26,7 @@ function LandingPage() {
   return (
     <div className="flex flex-col items-center text-center w-full">
 
-      <section className="bg-[#1B1718] text-white w-full py-20 flex flex-col items-center">
+      <section className="bg-[#1B1718] text-white w-full py-20 flex flex-col items-center p-4">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           Bienvenido a <span className="text-red-400">Shop</span>
         </h1>
