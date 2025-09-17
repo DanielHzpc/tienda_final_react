@@ -1,30 +1,25 @@
 import { useState } from "react";
 
 function ContactPage() {
-  const [formData, setFormData] = useState({
-    nombre: "",
-    email: "",
-    mensaje: "",
-  });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
+  const [enviando,setEnviando] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Datos del formulario:", formData);
-    alert("¡Mensaje enviado con éxito!");
-    setFormData({
-      nombre: "",
-      email: "",
-      mensaje: "",
-    });
-  };
+    setEnviando(true)
+
+    const serviceID = 'default_service';
+    const templateID = 'template_m8n5hps';
+
+    emailjs.sendForm(serviceID, templateID, e.target)
+      .then(() => {
+        alert('Enviado!!');
+        setEnviando(false)
+        e.target.reset()
+      }, (err) => {
+        alert(JSON.stringify(err));
+      });
+  }
 
   return (
     <div className="flex flex-col items-center text-center w-full min-h-screen">
@@ -40,15 +35,13 @@ function ContactPage() {
 
         <form onSubmit={handleSubmit} className="w-full max-w-xl p-6 bg-white rounded-lg shadow-xl text-black">
           <div className="mb-4">
-            <label htmlFor="nombre" className="block text-left text-gray-700 font-semibold mb-2">
+            <label htmlFor="name" className="block text-left text-gray-700 font-semibold mb-2">
               Nombre
             </label>
             <input
               type="text"
-              id="nombre"
-              name="nombre"
-              value={formData.nombre}
-              onChange={handleChange}
+              id="name"
+              name="name"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
               required
             />
@@ -62,23 +55,19 @@ function ContactPage() {
               type="email"
               id="email"
               name="email"
-              value={formData.email}
-              onChange={handleChange}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
               required
             />
           </div>
 
           <div className="mb-6">
-            <label htmlFor="mensaje" className="block text-left text-gray-700 font-semibold mb-2">
+            <label htmlFor="message" className="block text-left text-gray-700 font-semibold mb-2">
               Mensaje
             </label>
             <textarea
-              id="mensaje"
-              name="mensaje"
+              id="message"
+              name="message"
               rows="5"
-              value={formData.mensaje}
-              onChange={handleChange}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
               required
             ></textarea>
@@ -86,14 +75,18 @@ function ContactPage() {
 
           <button
             type="submit"
+            id="button"
             className="w-full bg-red-400 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-300 hover:text-black transition"
           >
-            Enviar Mensaje
+            {enviando ? "Enviando Mensaje..." : "Enviar"}
           </button>
         </form>
       </section>
+
     </div>
   );
 }
+
+
 
 export default ContactPage;
